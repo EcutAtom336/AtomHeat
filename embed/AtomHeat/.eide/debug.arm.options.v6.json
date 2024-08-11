@@ -1,0 +1,21 @@
+{
+    "version": 3,
+    "beforeBuildTasks": [],
+    "afterBuildTasks": [],
+    "global": {
+        "output-debug-info": "enable"
+    },
+    "c/cpp-compiler": {
+        "optimization": "level-0",
+        "language-c": "c99",
+        "language-cpp": "c++11",
+        "warnings": "ac5-like-warnings",
+        "misc-controls": "-Wa,-mimplicit-it=thumb -g"
+    },
+    "asm-compiler": {
+        "$use": "asm-auto"
+    },
+    "linker": {
+        "output-format": "elf"
+    }
+}

@@ -1,0 +1,182 @@
+{
+  "name": "AtomHeat",
+  "type": "ARM",
+  "dependenceList": [],
+  "srcDirs": [
+    "user",
+    "user/app/src",
+    "lib/LCD",
+    "lib/lsm6ds3tr-c-pid",
+    "lib/MultiButton",
+    "user/hal/src",
+    "user/res",
+    "user/port",
+    "lib/freertos/Source",
+    "lib/EasyLogger/easylogger/port",
+    "lib/EasyLogger/easylogger/src",
+    "lib/Firmware/CMSIS/GD/GD32F4xx/Source",
+    "lib/Firmware/GD32F4xx_standard_peripheral/Source",
+    "lib/EasyFlash_4.1.0/port",
+    "lib/EasyFlash_4.1.0/src",
+    "lib/EasyFlash_4.1.0/plugins/types",
+    "lib/EasyFlash_4.1.0/plugins/types/struct2json/src",
+    "user/utilities"
+  ],
+  "virtualFolder": {
+    "name": "<virtual_root>",
+    "files": [],
+    "folders": []
+  },
+  "outDir": "build",
+  "deviceName": "GD32F407VE",
+  "packDir": ".pack/GigaDevice/GD32F4xx_DFP.3.2.0",
+  "miscInfo": {
+    "uid": "14ab72b1123464a17833d769bc4d3032"
+  },
+  "targets": {
+    "Debug": {
+      "excludeList": [
+        "Firmware/CMSIS/GD/GD32F4xx/Source/ARM/startup_gd32f405_425.s",
+        "Firmware/CMSIS/GD/GD32F4xx/Source/ARM/startup_gd32f450_470.s",
+        "Firmware/CMSIS/GD/GD32F4xx/Source/IAR",
+        ".pack/GigaDevice/GD32F4xx_DFP.3.2.0/Device/F4XX/Source/ARM/startup_gd32f405_425.s",
+        ".pack/GigaDevice/GD32F4xx_DFP.3.2.0/Device/F4XX/Source/ARM/startup_gd32f450_470.s",
+        "lib/rt-thread/libcpu/arm/cortex-m4/context_iar.S",
+        "Firmware/CMSIS/GD/GD32F4xx/Source/ARM/startup_gd32f407_4271.s",
+        "Firmware/CMSIS/GD/GD32F4xx/Source/ARM/startup_gd32f4xx.s",
+        "lib/rt-thread/libcpu/arm/cortex-m4/context_gcc.S",
+        "Firmware/CMSIS/GD/GD32F4xx/Source/GCC",
+        "lib/MultiButton/examples",
+        "user/port/EasyLogger_port.c",
+        "lib/Firmware/CMSIS/GD/GD32F4xx/Source/IAR",
+        "lib/Firmware/CMSIS/GD/GD32F4xx/Source/GCC",
+        "lib/Firmware/CMSIS/GD/GD32F4xx/Source/ARM/startup_gd32f450_470.s",
+        "lib/Firmware/CMSIS/GD/GD32F4xx/Source/ARM/startup_gd32f405_425.s",
+        "lib/freertos/Source/portable/MemMang/heap_5.c",
+        "lib/freertos/Source/portable/MemMang/heap_3.c",
+        "lib/freertos/Source/portable/MemMang/heap_2.c",
+        "lib/freertos/Source/portable/MemMang/heap_1.c",
+        "lib/LCD/lcd.c"
+      ],
+      "toolchain": "AC6",
+      "compileConfig": {
+        "cpuType": "Cortex-M4",
+        "floatingPointHardware": "single",
+        "useCustomScatterFile": false,
+        "scatterFilePath": "linker_scripts/link.sct",
+        "storageLayout": {
+          "RAM": [
+            {
+              "tag": "IRAM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x20000000",
+                "size": "0x1FFFF"
+              },
+              "isChecked": true,
+              "noInit": false
+            },
+            {
+              "tag": "IRAM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x10000000",
+                "size": "0xFFFF"
+              },
+              "isChecked": false,
+              "noInit": false
+            }
+          ],
+          "ROM": [
+            {
+              "tag": "IROM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x08000000",
+                "size": "0x3FFF"
+              },
+              "isChecked": true,
+              "isStartup": true
+            },
+            {
+              "tag": "IROM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x08010000",
+                "size": "0x6FFFF"
+              },
+              "isChecked": true,
+              "isStartup": false
+            }
+          ]
+        },
+        "options": "null"
+      },
+      "uploader": "pyOCD",
+      "uploadConfig": {
+        "bin": "build/debug/atomheat.hex",
+        "targetName": "gd32f407ve",
+        "baseAddr": "0x08000000",
+        "speed": "8M",
+        "config": ".eide/debug.pyocd.yaml",
+        "otherCmds": ""
+      },
+      "uploadConfigMap": {
+        "JLink": {
+          "bin": "",
+          "baseAddr": "",
+          "cpuInfo": {
+            "vendor": "null",
+            "cpuName": "null"
+          },
+          "proType": 1,
+          "speed": 8000,
+          "otherCmds": ""
+        },
+        "pyOCD": {
+          "bin": "build/debug/atomheat.hex",
+          "targetName": "gd32f407ve",
+          "baseAddr": "0x08000000",
+          "speed": "8M",
+          "config": ".eide/debug.pyocd.yaml",
+          "otherCmds": ""
+        },
+        "OpenOCD": {
+          "bin": "",
+          "target": "stm32f1x",
+          "interface": "stlink",
+          "baseAddr": "0x08000000"
+        }
+      },
+      "custom_dep": {
+        "name": "default",
+        "incList": [
+          "user",
+          "user/app/inc",
+          "user/port",
+          "user/res",
+          "lib/Firmware/GD32F4xx_standard_peripheral/Include",
+          "lib/Firmware/CMSIS",
+          "lib/Firmware/CMSIS/GD/GD32F4xx/Include",
+          "lib/LCD",
+          "lib/MultiButton",
+          "lib/rt-thread/include",
+          "lib/EasyLogger/easylogger/inc",
+          "lib/freertos/Source/include",
+          "lib/freertos/Source/portable/GCC/ARM_CM4F",
+          "lib/lsm6ds3tr-c-pid",
+          "user/hal/inc",
+          "lib/EasyFlash_4.1.0/inc",
+          "lib/EasyFlash_4.1.0/plugins/types",
+          "lib/EasyFlash_4.1.0/plugins/types/struct2json/inc",
+          "user/utilities"
+        ],
+        "libList": [],
+        "defineList": [
+          "GD32F407"
+        ]
+      }
+    }
+  },
+  "version": "3.4"
+}
