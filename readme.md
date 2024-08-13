@@ -30,7 +30,11 @@
 
 ![硬件架构](pic/硬件架构.png)
 
-- 项目 BOM 表是准确的，可直接在立创商城下单。
+- 项目 BOM 表在 /production_doc 下，分别为：
+
+1. BOM_Board1_V0.3_Schematic1_V0.3_2024-08-13.xlsx
+
+2. BOM_Board2_V0.2_Schematic2_V0.2_2024-08-13.xlsx
 
 - 3D 打印外壳文件在 /production_doc/3d_print 下。
 
@@ -69,3 +73,9 @@
 - 当温度达到 300 摄氏度以上时，散热功率接近加热功率，温度上升非常缓慢。
 
 - 为适应项目需求中的低压、高温，本项目使用了 cnc 加工，复刻成本较高。
+
+- 演示视频链接
+
+1.[【星火计划-悬赏赛道】MINI加热台 AtomHeat 功能演示1](https://www.bilibili.com/video/BV15wYYe4EQf/?share_source=copy_web&vd_source=9ee252657cef98d209294340e74664c1)
+
+2.[【星火计划-悬赏赛道】MINI加热台 AtomHeat 功能演示2](https://www.bilibili.com/video/BV1ewYYe4Ey1/?share_source=copy_web&vd_source=9ee252657cef98d209294340e74664c1)
